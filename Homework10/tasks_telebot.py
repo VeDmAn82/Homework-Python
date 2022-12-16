@@ -5,7 +5,7 @@
 
 import telebot
 
-bot = telebot.TeleBot("TOKEN", parse_mode=None)
+bot = telebot.TeleBot("5821072722:AAEbVsW-Yp_soyzja3Gt99Fy7kZ975CvEJ0", parse_mode=None)
 
 run_question = False
 run_answer = False
@@ -31,7 +31,7 @@ def hello_user(message):
     # Задача2
     elif run_answer:
         data = open('questions.txt','r+', encoding='utf-8')
-        request = data.readlines()
+        answer = data.readlines()
         data.close()
         bot.send_message(message, message.text)                    
         run_answer = False
